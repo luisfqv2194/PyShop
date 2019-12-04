@@ -2,6 +2,7 @@
 
 ## Commands
 python manage.py startapp NAME
+
 python manage.py makemigrations
 
 python manage.py migrate

@@ -14,8 +14,7 @@ class Product(models.Model):
 
 
 class Offer(models.Model):
-    code = models.CharField(default=get_random_string(allowed_chars='ABCDEFGHIIJKLMOPQRSTUVWXYZ0123456789'),
-                            max_length=10, unique=True)
+    code = models.CharField(max_length=10, unique=True)
     description = models.CharField(max_length=400)
     discount = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
     initial_date = models.DateField(default=timezone.now)  # Allows to change the date later
